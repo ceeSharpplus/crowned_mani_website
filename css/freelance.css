@@ -1,4 +1,29 @@
-header{
+body{
+ background: #7C4018;
+ font-family: 'Kumbh Sans', sans-serif;
+ /*font-family: 'Oswald', sans-serif;*/	
+}
+h1{
 	text-align: center;
-	text-indent: left;
+	color: white;
+	font-weight: 200;
+	font-size: 64px;
+
+	/*font-family: 'amsterdamtwo_ttf';
+	font-weight: normal;
+    font-style: normal;*/
+	/*font-family: 'Parisienne', cursive;*/
+	font-family: 'Tangerine', cursive;
+
+}
+p{
+	font-size: 20px;
+}
+
+.introline{
+	font-size: 24px;
+}
+
+.taglinebutton{
+	font-size: 8px;
 }
