@@ -34,3 +34,15 @@ h1{
 	font-family: 'Montez', cursive;
 	margin-bottom: 0;
 }
+
+footer{
+	background-color: #FADC60;
+	text-align: center;
+	height: 40px;
+	margin-top: 100px ;
+}
+
+footer a:hover{
+	opacity: .5;
+	background-color: transparent;
+}
