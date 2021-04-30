@@ -15,26 +15,49 @@ nav{
 	color: #FADC60;
 	text-decoration: none;
 }
+body{
+ background: #7C4018;
+ font-family: 'Kumbh Sans', sans-serif;
+}
+
 a{
 	letter-spacing: 3px;
 	color: #FADC60;
 	font-size: 18px;
 	text-decoration: none;
 	}
-
 h1{
-	text-align:center;
+	text-align: center;
 	color: white;
-/*	font-weight: 200;
-*/	font-size: 100px;
-	/*font-family: 'amsterdamtwo_ttf';
-	font-weight: normal;
-    font-style: normal;*/
-	/*font-family: 'Parisienne', cursive;*/
-	font-family: 'Montez', cursive;
+	font-weight: 200;
+	font-size: 100px;
+	font-family: 'Parisienne', cursive;
 	margin-bottom: 0;
 }
+h2{
+	font-size: 40px;
+	font-family: 'Kumbh Sans', sans-serif;
+}
+p{
+	text-indent: 35px;
+	font-size: 20px;
+	font-family: 'Kumbh Sans', sans-serif;
+	color: #FADC60;
+	text-align: center;
+}
 
+.review_visuals{
+	text-align: center;
+}
+.review_visuals li{
+	display: inline-grid;
+	margin: 0 15px;
+}
+img {
+    width: 40%;
+    height: auto;
+    background-color: transparent;
+}
 footer{
 	background-color: #FADC60;
 	text-align: center;

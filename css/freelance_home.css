@@ -14,40 +14,40 @@ nav{
 	color: #FADC60;
 	text-decoration: none;
 }
-a{
-	letter-spacing: 3px;
-	color: #FADC60;
-	font-size: 18px;
-	text-decoration: none;
-	}
-h1{
-	text-align: left;
+
+header{
+	text-align: center;
 	color: white;
 	font-weight: 200;
 	font-size: 100px;
-	/*font-family: 'amsterdamtwo_ttf';
-	font-weight: normal;
-    font-style: normal;*/
-	/*font-family: 'Parisienne', cursive;*/
-	font-family: 'Tangerine', cursive;
+	font-family: 'Parisienne', cursive;
 	margin-bottom: 0;
 }
-p{
-	font-size: 20px;
-	 font-family: 'Kumbh Sans', sans-serif;
+a {
+	letter-spacing: 3px;
+	color: #FADC60;
+    font-size: 35px;
+    text-decoration: underline;
+    font-family: 'Kumbh Sans', sans-serif;
+
+}
+.left-row{
+	font-family: 'Kumbh Sans', sans-serif;
+	color: black;
+	font-size: 30px;
+}
+.right-row{
+	font-family: 'Kumbh Sans', sans-serif;
+	font-weight: 200;
+	text-align: center;
 }
 body{
  background: #7C4018;
  font-family: 'Kumbh Sans', sans-serif;
- /*font-family: 'Oswald', sans-serif;*/	
-}
-
-.introline{
-	font-size: 20px;
 }
 
 img{
-    width:50%;
+    width:60%;
     height:auto;
     background-color: transparent;
    }
