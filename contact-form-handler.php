@@ -14,7 +14,7 @@ $message = $_POST['message'];
 
 if (!preg_match(
 "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", 
-$email_address))
+$email))
 {
     $errors .= "\n Error: Invalid email address";
 }
@@ -30,7 +30,5 @@ if( empty($errors))
 	$headers .= "Reply-To: $email";
 	
 	mail($to,$email_subject,$email_body,$headers);
-	//redirect to the 'thank you' page
-	header('Location: contact-form-thank-you.html');
 } 
 ?>
