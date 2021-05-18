@@ -28,7 +28,7 @@
 	<!-- <main> -->
 	<h1>Hit Me Up!</h1><br>
 	<div id="wrapper">
-	  	<form action="https://docs.google.com/forms/d/e/1FAIpQLSfo0057sHciNSXW52vBT36CpHbmofbnqeznujvgNdwZD-6SqA/formResponse?" name="contactform" target="hidden_iframe" onsubmit="submitted=true;"> <!--onSubmit="alert('Thank you for your inquiry. We will contact you shortly');"-->
+	  	<form action="https://docs.google.com/forms/d/e/1FAIpQLSfo0057sHciNSXW52vBT36CpHbmofbnqeznujvgNdwZD-6SqA/formResponse?" name="contactform" target="hidden_iframe" onsubmit="submitted=true;"> onSubmit="alert('Thank you for your inquiry. We will contact you shortly');
 			<input type='hidden' name='rec_mailto' value='contact@crownedmaniservices.com'>
       			<input type='hidden' name='rec_subject' value='New Contact Form'>
 			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
@@ -56,7 +56,7 @@
 	      <textarea class="textarea" cols="50" id="entry.1045079415" name="entry.1045079415" required="" rows="4"></textarea>
 	    </p>
 	    <p class="field">
-	      <input class="button" type="submit" value="Send message">
+	      <input class="button" type="button" value="Send message" onclick="submitForm()">
 	    </p>
 	  	</form>
 	</div>
@@ -65,24 +65,25 @@
 		<script type="text/javascript">
 			$('#contactform').on('submit', function(e) {
   			$('#contactform *').fadeOut(2000);
-  			$('#contactform').prepend('Thank you for your inquiry. We will contact you shortly');
-  			});
+			$('#contactform')[0].reset();
+  			<!--$('#contactform').prepend('Thank you for your inquiry. We will contact you shortly'); -->
+  			}); 
 		</script>
 	
 	<script type="text/javascript">
 		class floatingLabel
   
-  constructor: (form,options={}) ->
+  constructor: (contactform,options={}) ->
     
-    return unless form
+    return unless contactform
     
     options.focusClass ||= "focus"
     options.activeClass ||= "active"
     options.errorClass ||= "error"
     
-    form.classList.add 'has-floated-label'
+    contactform.classList.add 'has-floated-label'
     
-    for label in form.querySelectorAll('label')
+    for label in contactform.querySelectorAll('label')
       return unless input = document.querySelector("##{label.getAttribute('for')}")
                   
       for event in ['keyup','input', 'change']
@@ -97,7 +98,7 @@
 
 # initialize
     
-window.floatingLabel = new floatingLabel document.querySelector('.form')
+window.floatingLabel = new floatingLabel document.querySelector('.contactform')
 	</script>
 <!-- 	</main> -->
 </body>
