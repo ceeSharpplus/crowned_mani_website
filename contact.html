@@ -27,11 +27,13 @@
 	</ul> -->
 	<!-- <main> -->
 	<h1>Hit Me Up!</h1><br>
-		
+		<!--Update the URL for thank you page on form submit -->
+    		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"      
+    			onload="if(submitted)">
+		</iframe> 
+	
 	<div id="wrapper">
-	  	<form action="https://docs.google.com/forms/d/e/1FAIpQLSfo0057sHciNSXW52vBT36CpHbmofbnqeznujvgNdwZD-6SqA/formResponse" name="contactform" target="hidden_iframe" onSubmit="alert('Thank you for your inquiry. We will contact you shortly');">
-			<input type='hidden' name='rec_mailto' value='contact@crownedmaniservices.com'>
-      			<input type='hidden' name='rec_subject' value='New Contact Form'>
+	  	<form action="https://docs.google.com/forms/d/e/1FAIpQLSfo0057sHciNSXW52vBT36CpHbmofbnqeznujvgNdwZD-6SqA/formResponse" name="contactform" method="post" target="hidden_iframe" onsubmit="return validateForm(); " onSubmit="alert('Thank you for your inquiry. We will contact you shortly');">
 			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 			
 	    <p class="field required half">
@@ -40,7 +42,7 @@
 	    </p>
 	    <p class="field required half">
 	      <label class="label" for="email">E-mail</label>
-	      <input class="text-input" id="entry.2075911786" name="entry.2075911786" required="" type="email">
+	      <input class="text-input" id="entry.2075911786" name="entry.2075911786" required="" type="email"> 
 	    </p>
 	    <p class="field required half">
 	      <label class="label" for="service">Service</label>
@@ -68,6 +70,68 @@
   			$('#contactform *').fadeOut(2000);
   			<!--$('#contactform').prepend('Your submission has been processed...');-->
   			});
+			
+			function validateName() {
+            var name = document.getElementById('name').value;
+            if(name.length == 0) {
+              alert("Name can't be blank") ;
+              return false;
+
+            }
+            if (!name.match(/^[a-zA-Z]{3,}(?: [a-zA-Z]+){0,2}$/)) {
+              alert("Please enter your correct name") ;//Validation Message
+              return false;
+            }
+            return true;
+          }
+
+          function validatePhone() {
+            var phone = document.getElementById('phone').value;
+            if(phone.length == 0) {
+              alert("Phone number can't be blank") ;//Validation Message
+              return false;
+            }
+
+            if(!phone.match(/^[0]?[789]\d{9}$/)) {
+             alert("Please enter a correct phone number") ;//Validation Message
+             return false;
+           }
+
+           return true;
+
+         }
+
+         function validateEmail () {
+
+          var email = document.getElementById('email').value;
+          if(email.length == 0) {
+            alert("Email can't be blank") ;//Validation Message
+            return false;
+
+          }
+
+          if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+            alert("Please enter a correct email address") ;//Validation Message
+            return false;
+
+          }
+
+          return true;
+
+        }
+
+
+        function validateForm() {
+          if (!validateName() || !validatePhone() || !validateEmail()) {
+
+            alert("Form not submitted");//Validation Message
+            return false;
+          }
+          else {
+            submitted=true;
+            return true;
+          }
+        }
 		</script>
 	
 	<script type="text/javascript">
