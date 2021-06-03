@@ -33,8 +33,10 @@
 		</iframe> 
 	
 	<div id="wrapper">
-	  	<form action="https://docs.google.com/forms/d/e/1FAIpQLSfo0057sHciNSXW52vBT36CpHbmofbnqeznujvgNdwZD-6SqA/formResponse" name="contactform" method="post" target="hidden_iframe" onsubmit="return validateForm(); " onSubmit="alert('Thank you for your inquiry. We will contact you shortly');">
-			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+	  	<form action="contact-form-handler.php" name="contactform" method="POST" onSubmit="alert('Thank you for your inquiry. We will contact you shortly');">
+			<input type='hidden' name='rec_mailto' value='contact@crownedmaniservices.com'>
+      			<input type='hidden' name='rec_subject' value='New Contact Form'>
+     			<input type='hidden' name='rec_thanks' value='index.html'>
 			
 	    <p class="field required half">
 	      <label class="label required" for="name">Name</label>
