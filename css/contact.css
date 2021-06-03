@@ -29,11 +29,6 @@ body{
  background: #7C4018;
  font-family: 'Kumbh Sans', sans-serif;
  }
-
-iframe {
-    text-align:center;
-    width:100%;
-}
 a{
 	letter-spacing: 3px;
 	color: #FADC60;
