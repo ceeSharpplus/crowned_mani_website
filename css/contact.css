@@ -30,6 +30,11 @@ body{
  font-family: 'Kumbh Sans', sans-serif;
  }
 
+iframe {
+    display: block;
+    border-style:none;
+    margin: 0 auto;
+}
 a{
 	letter-spacing: 3px;
 	color: #FADC60;
