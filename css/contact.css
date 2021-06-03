@@ -24,11 +24,15 @@ h1{
 	margin-bottom: 0;
 }
 
+#googleForm {
+  text-align: center;
+}
 
 body{
  background: #7C4018;
  font-family: 'Kumbh Sans', sans-serif;
  }
+
 a{
 	letter-spacing: 3px;
 	color: #FADC60;
