@@ -31,9 +31,8 @@ body{
  }
 
 iframe {
-    display: block;
-    border-style:none;
-    margin: 0 auto;
+    text-align:center;
+    width:100%;
 }
 a{
 	letter-spacing: 3px;
