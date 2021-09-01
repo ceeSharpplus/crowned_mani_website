@@ -34,7 +34,7 @@ body{
 }
 
 /* Create two equal columns that sits next to each other */
-.option {
+.option{
   flex: 1;
   flex-direction:column;
   margin: margin:0 8px 8px 0;
