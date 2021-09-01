@@ -31,14 +31,16 @@ body{
 }
 .serviceslist {
   display: flex;
+  padding: 30px;
+  text-align: center;
 }
 
 /* Create two equal columns that sits next to each other */
-.option{
-  flex: 1;
+.option1, .option2, .option3{
   flex-direction:row;
-  margin-right: 20px;
   border: 2px #FADC60;
+  flex-basis: 0;
+  flex-grow: 1;
 }
 
 a{
