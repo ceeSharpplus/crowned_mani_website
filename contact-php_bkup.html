@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<nav> 
+		<ul class="navigation">
+			<li><a href="https://crownedmaniservices.com/index.html">home</a></li>
+			<li><a href="https://crownedmaniservices.com/services_page.html">services</a></li>
+			<li><a href="https://crownedmaniservices.com/about_pg.html">about us</a></li>
+			<li><a href="https://crownedmaniservices.com/contact.html">contact</a></li>
+		</ul>
+	</nav>
+	<title>Services</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="https://crownedmaniservices.com/css/contact.css" type="text/css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css">
+</head>
+<body>
+	<!-- <h2>Process</h2> -->
+	<!-- <ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul> -->
+	<!-- <main> -->
+	<h1>Hit Me Up!</h1><br>
+		<!--Update the URL for thank you page on form submit -->
+    		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"      
+    			onload="if(submitted)">
+		</iframe> 
+	
+	<div id="wrapper">
+		<form action="https://crownedmaniservices.com/contact-form-handler.php" name="contactform" method="POST" onSubmit="alert('Thank you for your inquiry. We will contact you shortly');">
+			<input type='hidden' name='rec_mailto' value='contact@crownedmaniservices.com'>
+      			<input type='hidden' name='rec_subject' value='New Contact Form'>
+     			<input type='hidden' name='rec_thanks' value='contact.html'>	
+	  	
+	    <p class="field required half">
+	      <label class="label required" for="name">Name</label>
+	      <input class="text-input" id="entry.220449490" name="entry.220449490" required="" type="text">
+	    </p>
+	    <p class="field required half">
+	      <label class="label" for="email">E-mail</label>
+	      <input class="text-input" id="entry.2075911786" name="entry.2075911786" required="" type="email"> 
+	    </p>
+	    <p class="field required half">
+	      <label class="label" for="service">Service</label>
+	      <select id="entry.570244200" name="entry.570244200" multiple>
+  		<option value="smpost">Social Media Post</option>
+  		<option value="poster">Poster</option>
+  		<option value="flyer">Flyer</option>
+  		<option value="invitation">Invitation</option>
+		<option value="websitemockup">General Website Mockup</option>
+	      </select>
+	    </p>
+	    <p class="field">
+	      <label class="label" for="message">Inquiry</label>
+	      <textarea class="textarea" cols="50" id="entry.1045079415" name="entry.1045079415" required="" rows="4"></textarea>
+	    </p>
+	    <p class="field">
+	      <input class="button" type="submit" value="Send message">
+	    </p>
+	  	</form>
+	</div>
+	
+		<script type="text/javascript">var submitted=false;</script>
+		<script type="text/javascript">
+			$('#contactform').on('submit', function(e) {
+  			$('#contactform *').fadeOut(2000);
+  			<!--$('#contactform').prepend('Your submission has been processed...');-->
+  			});
+			
+			function validateName() {
+            var name = document.getElementById('name').value;
+            if(name.length == 0) {
+              alert("Name can't be blank") ;
+              return false;
+
+            }
+            if (!name.match(/^[a-zA-Z]{3,}(?: [a-zA-Z]+){0,2}$/)) {
+              alert("Please enter your correct name") ;//Validation Message
+              return false;
+            }
+            return true;
+          }
+
+          function validatePhone() {
+            var phone = document.getElementById('phone').value;
+            if(phone.length == 0) {
+              alert("Phone number can't be blank") ;//Validation Message
+              return false;
+            }
+
+            if(!phone.match(/^[0]?[789]\d{9}$/)) {
+             alert("Please enter a correct phone number") ;//Validation Message
+             return false;
+           }
+
+           return true;
+
+         }
+
+         function validateEmail () {
+
+          var email = document.getElementById('email').value;
+          if(email.length == 0) {
+            alert("Email can't be blank") ;//Validation Message
+            return false;
+
+          }
+
+          if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+            alert("Please enter a correct email address") ;//Validation Message
+            return false;
+
+          }
+
+          return true;
+
+        }
+
+
+        function validateForm() {
+          if (!validateName() || !validatePhone() || !validateEmail()) {
+
+            alert("Form not submitted");//Validation Message
+            return false;
+          }
+          else {
+            submitted=true;
+            return true;
+          }
+        }
+		</script>
+	
+	<script type="text/javascript">
+		class floatingLabel
+  
+  constructor: (form,options={}) ->
+    
+    return unless form
+    
+    options.focusClass ||= "focus"
+    options.activeClass ||= "active"
+    options.errorClass ||= "error"
+    
+    form.classList.add 'has-floated-label'
+    
+    for label in form.querySelectorAll('label')
+      return unless input = document.querySelector("##{label.getAttribute('for')}")
+                  
+      for event in ['keyup','input', 'change']
+        input.addEventListener event, ->
+          @parentNode.classList.remove options.errorClass
+          @parentNode.classList.toggle options.activeClass, !!@value
+      input.addEventListener 'focus', ->
+        @parentNode.classList.add options.focusClass
+      input.addEventListener 'blur', ->
+        @parentNode.classList.remove options.focusClass
+      input.parentNode.classList.toggle options.activeClass, !!input.value
+
+# initialize
+    
+window.floatingLabel = new floatingLabel document.querySelector('.form')
+	</script>
+<!-- 	</main> -->
+</body>
+<footer>
+  	<br>This site was created by Crowned Mani,LLC 
+</footer>
+</html>
