@@ -37,10 +37,9 @@ body{
 .option{
   flex: 1;
   flex-direction:column;
-  margin: margin:0 8px 8px 0;
+  margin-right: 20px;
   border: 2px #FADC60;
 }
-
 
 a{
 	letter-spacing: 3px;
