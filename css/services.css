@@ -17,8 +17,72 @@ nav{
 	color: #FADC60;
 	text-decoration: none;
 }
+.inner-width{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.section-title{
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 200;
+	font-family: 'Parisienne', cursive;
+	margin-bottom: 0;
+	margin-top: auto;
+}
+.border{
+  width: 160px;
+  height: 2px;
+  background: #FADC60;
+  margin: 40px auto;
+}
+.services-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-h2{
+.service-box{
+  max-width: 33.33%;
+  padding: 10px;
+  text-align: center;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.service-icon{
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border: 3px solid #FADC60;
+  color: #FADC60;
+  transform: rotate(45deg);
+  margin-bottom: 30px;
+  margin-top: 16px;
+  transition: 0.3s linear;
+}
+.service-icon i{
+  line-height: 70px;
+  transform: rotate(-45deg);
+  font-size: 26px;
+}
+.service-box:hover .service-icon{
+  background: #FADC60;
+  color: #ddd;
+}
+.service-title{
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.service-desc{
+  font-size: 14px;
+}
+/* h2{
 	text-align: center;
 	color: white;
 	font-weight: 200;
@@ -37,7 +101,7 @@ body{
   text-align: center;
 }
 
-/* Create two equal columns that sits next to each other */
+/* Create two equal columns that sits next to each other *//*
 .option1, .option2, .option3{
   flex-direction:row;
   border: 2px #FADC60;
@@ -52,7 +116,7 @@ a{
 	font-size: 18px;
 	text-decoration: none;
 	}
-
+*/
 
 footer{
 	background-color: #FADC60;
