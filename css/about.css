@@ -55,11 +55,20 @@ p{
 	display: inline-grid;
 	margin: 0 15px;
 }
+.left-row{
+	font-family: 'Kumbh Sans', sans-serif;
+	color: black;
+	font-size: 22px;
+}
+.right-row{
+	font-family: 'Kumbh Sans', sans-serif;
+	font-weight: 200;
+	text-align: center;
+}
 img {
     width: 40%;
     height: auto;
     background-color:transparent;
-    text-align:center;
 }
 footer{
 	color: #FADC60;
