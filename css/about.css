@@ -58,7 +58,8 @@ p{
 img {
     width: 40%;
     height: auto;
-    background-color: transparent;
+    background-color:transparent;
+    text-align:center;
 }
 footer{
 	color: #FADC60;
