@@ -50,6 +50,11 @@ img{
     height:auto;
     background-color: transparent;
    }
+<style>
+img {
+    max-width: 100%;
+}
+</style>
 
 footer{
 	color: #FADC60;
